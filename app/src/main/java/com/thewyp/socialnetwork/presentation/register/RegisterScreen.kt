@@ -21,12 +21,14 @@ import com.thewyp.socialnetwork.presentation.components.StandardTextField
 import com.thewyp.socialnetwork.presentation.ui.theme.SpaceLarge
 import com.thewyp.socialnetwork.presentation.ui.theme.SpaceMedium
 import com.thewyp.socialnetwork.presentation.util.Screen
+import com.thewyp.socialnetwork.util.Constants
 
 @Composable
 fun RegisterScreen(
     navController: NavController,
     viewModel: RegisterViewModel = viewModel()
 ) {
+    val state = viewModel.state.value
     Box(
         modifier = Modifier.fillMaxSize()
             .padding(
@@ -48,42 +50,70 @@ fun RegisterScreen(
             )
             Spacer(modifier = Modifier.height(SpaceMedium))
             StandardTextField(
-                text = viewModel.emailText.value,
+                text = state.emailText,
                 hint = stringResource(R.string.email),
                 keyboardType = KeyboardType.Email,
                 onValueChange = {
-                    viewModel.setEmailText(it)
+                    viewModel.onEvent(RegisterEvent.EnteredEmail(it))
                 },
-                error = viewModel.emailError.value
+                error = when (state.emailError) {
+                    RegisterState.EmailError.FieldEmpty -> {
+                        stringResource(id = R.string.this_field_cant_be_empty)
+                    }
+                    RegisterState.EmailError.InvalidEmail -> {
+                        stringResource(id = R.string.not_a_valid_email)
+                    }
+                    null -> ""
+                }
             )
             Spacer(modifier = Modifier.height(SpaceMedium))
             StandardTextField(
-                text = viewModel.userNameText.value,
+                text = state.usernameText,
                 hint = stringResource(R.string.username),
                 keyboardType = KeyboardType.Text,
                 onValueChange = {
-                    viewModel.setUserNameText(it)
+                    viewModel.onEvent(RegisterEvent.EnteredUsername(it))
                 },
-                error = viewModel.userNameText.value
+                error = when (state.usernameError) {
+                    RegisterState.UsernameError.FieldEmpty -> {
+                        stringResource(id = R.string.this_field_cant_be_empty)
+                    }
+                    RegisterState.UsernameError.InputTooShort -> {
+                        stringResource(id = R.string.input_too_short)
+                    }
+                    null -> ""
+                }
             )
             Spacer(modifier = Modifier.height(SpaceMedium))
             StandardTextField(
-                text = viewModel.userPasswordText.value,
+                text = state.passwordText,
                 hint = stringResource(R.string.password_hint),
                 keyboardType = KeyboardType.Password,
-                isPasswordVisible = viewModel.showPassword.value,
+                isPasswordVisible = state.isPasswordVisible,
                 onPasswordToggleClick = {
-                    viewModel.setShowPassword(it)
+                    viewModel.onEvent(RegisterEvent.TogglePasswordVisibility)
                 },
                 onValueChange = {
-                    viewModel.setUserPasswordText(it)
+                    viewModel.onEvent(RegisterEvent.EnteredPassword(it))
                 },
-                error = viewModel.passwordError.value
+                error = when (state.passwordError) {
+                    RegisterState.PasswordError.FieldEmpty -> {
+                        stringResource(id = R.string.this_field_cant_be_empty)
+                    }
+                    RegisterState.PasswordError.InputTooShort -> {
+                        stringResource(id = R.string.input_too_short, Constants.MIN_PASSWORD_LENGTH)
+                    }
+                    RegisterState.PasswordError.InvalidPassword -> {
+                        stringResource(id = R.string.invalid_password)
+                    }
+                    null -> ""
+                }
             )
             Spacer(modifier = Modifier.height(SpaceMedium))
             Button(
                 onClick = {
-                    navController.navigate(Screen.MainFeedScreen.route)
+                          viewModel.onEvent(RegisterEvent.Register)
+//                    navController.navigate(Screen.MainFeedScreen.route)
                 },
                 modifier = Modifier.align(Alignment.End)
             ) {
