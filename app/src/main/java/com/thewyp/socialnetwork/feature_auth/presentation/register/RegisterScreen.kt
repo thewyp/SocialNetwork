@@ -2,18 +2,19 @@ package com.thewyp.socialnetwork.feature_auth.presentation.register
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.thewyp.socialnetwork.R
@@ -21,16 +22,34 @@ import com.thewyp.socialnetwork.core.presentation.components.StandardTextField
 import com.thewyp.socialnetwork.core.presentation.ui.theme.SpaceLarge
 import com.thewyp.socialnetwork.core.presentation.ui.theme.SpaceMedium
 import com.thewyp.socialnetwork.core.util.Constants
+import com.thewyp.socialnetwork.core.util.asString
 import com.thewyp.socialnetwork.feature_auth.presentation.util.AuthError
+import kotlinx.coroutines.flow.collectLatest
 
 @Composable
 fun RegisterScreen(
     navController: NavController,
-    viewModel: RegisterViewModel = viewModel()
+    scaffoldState: ScaffoldState,
+    viewModel: RegisterViewModel = hiltViewModel()
 ) {
     val usernameState = viewModel.usernameState.value
     val emailState = viewModel.emailState.value
     val passwordState = viewModel.passwordState.value
+    val registerState = viewModel.registerState.value
+    val context = LocalContext.current
+
+    LaunchedEffect(key1 = true) {
+        viewModel.eventFlow.collectLatest { event ->
+            when (event) {
+                is RegisterViewModel.UiEvent.SnackBarEvent -> {
+                    scaffoldState.snackbarHostState.showSnackbar(
+                        event.uiText.asString(context),
+                        duration = SnackbarDuration.Long
+                    )
+                }
+            }
+        }
+    }
     Box(
         modifier = Modifier.fillMaxSize()
             .padding(
@@ -117,12 +136,16 @@ fun RegisterScreen(
                     viewModel.onEvent(RegisterEvent.Register)
 //                    navController.navigate(Screen.MainFeedScreen.route)
                 },
+                enabled = !registerState.isLoading,
                 modifier = Modifier.align(Alignment.End)
             ) {
                 Text(
                     text = stringResource(R.string.register),
                     color = MaterialTheme.colors.onPrimary
                 )
+            }
+            if(registerState.isLoading) {
+                CircularProgressIndicator()
             }
         }
         Text(

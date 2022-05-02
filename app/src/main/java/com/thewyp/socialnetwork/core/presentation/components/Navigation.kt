@@ -2,6 +2,7 @@ package com.thewyp.socialnetwork.core.presentation.util
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.ScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
@@ -25,7 +26,8 @@ import com.thewyp.socialnetwork.feature_splash.presentation.splash.SplashScreen
 @ExperimentalMaterialApi
 @Composable
 fun Navigation(
-    navController: NavHostController
+    navController: NavHostController,
+    scaffoldState: ScaffoldState
 ) {
     NavHost(
         navController = navController,
@@ -42,7 +44,10 @@ fun Navigation(
             MainFeedScreen(navController = navController)
         }
         composable(route = Screen.RegisterScreen.route) {
-            RegisterScreen(navController = navController)
+            RegisterScreen(
+                navController = navController,
+                scaffoldState = scaffoldState
+            )
         }
         composable(route = Screen.ActivityScreen.route) {
             ActivityScreen(navController = navController)

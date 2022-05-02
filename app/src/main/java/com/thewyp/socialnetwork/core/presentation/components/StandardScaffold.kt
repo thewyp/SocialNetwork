@@ -26,6 +26,7 @@ fun StandardScaffold(
     navController: NavController,
     modifier: Modifier = Modifier,
     showBottomBar: Boolean = true,
+    scaffoldState: ScaffoldState,
     bottomNavItems: List<BottomNavItem> = listOf(
         BottomNavItem(
             route = Screen.MainFeedScreen.route,
@@ -87,6 +88,7 @@ fun StandardScaffold(
                 }
             }
         },
+        scaffoldState = scaffoldState,
         floatingActionButton = {
             if (showBottomBar) {
                 FloatingActionButton(
