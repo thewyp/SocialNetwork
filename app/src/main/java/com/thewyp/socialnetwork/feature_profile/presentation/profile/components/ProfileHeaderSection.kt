@@ -15,7 +15,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.thewyp.socialnetwork.core.doman.models.User
+import com.thewyp.socialnetwork.core.domain.models.User
 import com.thewyp.socialnetwork.core.presentation.ui.theme.SpaceLarge
 import com.thewyp.socialnetwork.core.presentation.ui.theme.SpaceMedium
 import com.thewyp.socialnetwork.core.presentation.ui.theme.SpaceSmall

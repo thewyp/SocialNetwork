@@ -3,7 +3,7 @@ package com.thewyp.socialnetwork.feature_profile.presentation.edit_profile
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.thewyp.socialnetwork.core.doman.states.StandardTextFieldState
+import com.thewyp.socialnetwork.core.domain.states.StandardTextFieldState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

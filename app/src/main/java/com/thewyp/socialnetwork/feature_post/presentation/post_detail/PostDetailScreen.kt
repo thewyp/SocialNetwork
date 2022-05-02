@@ -20,8 +20,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.thewyp.socialnetwork.R
-import com.thewyp.socialnetwork.core.doman.models.Comment
-import com.thewyp.socialnetwork.core.doman.models.Post
+import com.thewyp.socialnetwork.core.domain.models.Comment
+import com.thewyp.socialnetwork.core.domain.models.Post
 import com.thewyp.socialnetwork.core.presentation.components.ActionRow
 import com.thewyp.socialnetwork.core.presentation.components.StandardToolbar
 import com.thewyp.socialnetwork.core.presentation.ui.theme.*

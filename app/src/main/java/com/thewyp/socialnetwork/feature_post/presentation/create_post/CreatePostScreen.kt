@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.thewyp.socialnetwork.R
-import com.thewyp.socialnetwork.core.doman.states.StandardTextFieldState
+import com.thewyp.socialnetwork.core.domain.states.StandardTextFieldState
 import com.thewyp.socialnetwork.core.presentation.components.StandardTextField
 import com.thewyp.socialnetwork.core.presentation.components.StandardToolbar
 import com.thewyp.socialnetwork.core.presentation.ui.theme.SpaceLarge

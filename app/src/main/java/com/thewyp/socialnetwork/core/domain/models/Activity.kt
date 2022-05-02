@@ -1,4 +1,4 @@
-package com.thewyp.socialnetwork.core.doman.models
+package com.thewyp.socialnetwork.core.domain.models
 
 import com.thewyp.socialnetwork.feature_activity.doman.ActivityAction
 

@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.thewyp.socialnetwork.core.doman.models.Activity
+import com.thewyp.socialnetwork.core.domain.models.Activity
 import com.thewyp.socialnetwork.feature_activity.doman.ActivityAction
 import com.thewyp.socialnetwork.core.util.DateFormatUtil
 import com.thewyp.socialnetwork.feature_activity.presentation.activity.components.ActivityItem

@@ -14,7 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavController
 import com.thewyp.socialnetwork.R
-import com.thewyp.socialnetwork.core.doman.models.User
+import com.thewyp.socialnetwork.core.domain.models.User
 import com.thewyp.socialnetwork.core.presentation.components.StandardToolbar
 import com.thewyp.socialnetwork.core.presentation.components.UserProfileItem
 import com.thewyp.socialnetwork.core.presentation.ui.theme.IconSizeMedium

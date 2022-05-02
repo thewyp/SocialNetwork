@@ -17,7 +17,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.NavGraph
 import com.thewyp.socialnetwork.R
-import com.thewyp.socialnetwork.core.doman.models.BottomNavItem
+import com.thewyp.socialnetwork.core.domain.models.BottomNavItem
 import com.thewyp.socialnetwork.core.util.Screen
 
 

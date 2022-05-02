@@ -13,7 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.thewyp.socialnetwork.R
-import com.thewyp.socialnetwork.core.doman.models.User
+import com.thewyp.socialnetwork.core.domain.models.User
 import com.thewyp.socialnetwork.core.presentation.ui.theme.IconSizeMedium
 import com.thewyp.socialnetwork.core.presentation.ui.theme.ProfilePictureSizeSmall
 import com.thewyp.socialnetwork.core.presentation.ui.theme.SpaceMedium

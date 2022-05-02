@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-import com.thewyp.socialnetwork.core.doman.models.Post
+import com.thewyp.socialnetwork.core.domain.models.Post
 import com.thewyp.socialnetwork.core.presentation.ui.theme.*
 import com.thewyp.socialnetwork.core.util.Constants
 

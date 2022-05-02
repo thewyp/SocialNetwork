@@ -1,4 +1,4 @@
-package com.thewyp.socialnetwork.feature_auth.doman.repository
+package com.thewyp.socialnetwork.feature_auth.domain.repository
 
 import com.thewyp.socialnetwork.core.util.SimpleResource
 

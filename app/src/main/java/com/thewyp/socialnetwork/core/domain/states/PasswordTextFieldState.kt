@@ -1,4 +1,4 @@
-package com.thewyp.socialnetwork.core.doman.states
+package com.thewyp.socialnetwork.core.domain.states
 
 import com.thewyp.socialnetwork.core.util.Error
 

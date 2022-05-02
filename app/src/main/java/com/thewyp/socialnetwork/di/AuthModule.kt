@@ -1,9 +1,9 @@
 package com.thewyp.socialnetwork.di
 
 import com.thewyp.socialnetwork.feature_auth.data.remote.AuthApi
-import com.thewyp.socialnetwork.feature_auth.doman.repository.AuthRepository
-import com.thewyp.socialnetwork.feature_auth.doman.repository.AuthRepositoryImpl
-import com.thewyp.socialnetwork.feature_auth.doman.use_case.RegisterUseCase
+import com.thewyp.socialnetwork.feature_auth.domain.repository.AuthRepository
+import com.thewyp.socialnetwork.feature_auth.domain.repository.AuthRepositoryImpl
+import com.thewyp.socialnetwork.feature_auth.domain.use_case.RegisterUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.thewyp.socialnetwork.core.doman.models.Post
+import com.thewyp.socialnetwork.core.domain.models.Post
 import com.thewyp.socialnetwork.core.util.Screen
 import com.thewyp.socialnetwork.feature_post.presentation.post_detail.PostDetailScreen
 import com.thewyp.socialnetwork.feature_activity.presentation.activity.ActivityScreen

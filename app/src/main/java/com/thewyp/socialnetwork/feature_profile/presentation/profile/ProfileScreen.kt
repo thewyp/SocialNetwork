@@ -26,8 +26,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.thewyp.socialnetwork.R
-import com.thewyp.socialnetwork.core.doman.models.Post
-import com.thewyp.socialnetwork.core.doman.models.User
+import com.thewyp.socialnetwork.core.domain.models.Post
+import com.thewyp.socialnetwork.core.domain.models.User
 import com.thewyp.socialnetwork.core.presentation.components.Post
 import com.thewyp.socialnetwork.feature_profile.presentation.profile.components.BannerSection
 import com.thewyp.socialnetwork.feature_profile.presentation.profile.components.ProfileHeaderSection

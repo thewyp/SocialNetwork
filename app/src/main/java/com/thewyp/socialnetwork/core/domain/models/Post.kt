@@ -1,4 +1,4 @@
-package com.thewyp.socialnetwork.core.doman.models
+package com.thewyp.socialnetwork.core.domain.models
 
 data class Post(
     val username: String,

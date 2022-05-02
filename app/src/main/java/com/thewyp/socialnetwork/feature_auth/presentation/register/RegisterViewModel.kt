@@ -6,12 +6,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.thewyp.socialnetwork.R
-import com.thewyp.socialnetwork.core.doman.states.PasswordTextFieldState
-import com.thewyp.socialnetwork.core.doman.states.StandardTextFieldState
+import com.thewyp.socialnetwork.core.domain.states.PasswordTextFieldState
+import com.thewyp.socialnetwork.core.domain.states.StandardTextFieldState
 import com.thewyp.socialnetwork.core.util.Constants
 import com.thewyp.socialnetwork.core.util.Resource
 import com.thewyp.socialnetwork.core.util.UiText
-import com.thewyp.socialnetwork.feature_auth.doman.use_case.RegisterUseCase
+import com.thewyp.socialnetwork.feature_auth.domain.use_case.RegisterUseCase
 import com.thewyp.socialnetwork.feature_auth.presentation.util.AuthError
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow

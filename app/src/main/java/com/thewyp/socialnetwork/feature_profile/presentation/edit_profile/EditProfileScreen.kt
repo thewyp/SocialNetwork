@@ -36,7 +36,7 @@ import com.google.accompanist.flowlayout.MainAxisAlignment
 import com.thewyp.socialnetwork.core.presentation.components.StandardToolbar
 import com.thewyp.socialnetwork.core.presentation.ui.theme.ProfilePictureSizeLarge
 import com.thewyp.socialnetwork.R
-import com.thewyp.socialnetwork.core.doman.states.StandardTextFieldState
+import com.thewyp.socialnetwork.core.domain.states.StandardTextFieldState
 import com.thewyp.socialnetwork.core.presentation.components.StandardTextField
 import com.thewyp.socialnetwork.feature_profile.presentation.edit_profile.components.Chip
 import com.thewyp.socialnetwork.core.presentation.ui.theme.SpaceLarge

@@ -19,7 +19,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.thewyp.socialnetwork.R
-import com.thewyp.socialnetwork.core.doman.models.Activity
+import com.thewyp.socialnetwork.core.domain.models.Activity
 import com.thewyp.socialnetwork.feature_activity.doman.ActivityAction
 import com.thewyp.socialnetwork.core.presentation.ui.theme.SpaceSmall
 

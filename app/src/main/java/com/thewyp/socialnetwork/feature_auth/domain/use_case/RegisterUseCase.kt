@@ -1,7 +1,7 @@
-package com.thewyp.socialnetwork.feature_auth.doman.use_case
+package com.thewyp.socialnetwork.feature_auth.domain.use_case
 
 import com.thewyp.socialnetwork.core.util.SimpleResource
-import com.thewyp.socialnetwork.feature_auth.doman.repository.AuthRepository
+import com.thewyp.socialnetwork.feature_auth.domain.repository.AuthRepository
 
 class RegisterUseCase(
     private val repository: AuthRepository

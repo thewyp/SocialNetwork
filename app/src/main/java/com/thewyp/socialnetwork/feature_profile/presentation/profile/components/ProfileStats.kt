@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import com.thewyp.socialnetwork.R
-import com.thewyp.socialnetwork.core.doman.models.User
+import com.thewyp.socialnetwork.core.domain.models.User
 import com.thewyp.socialnetwork.core.presentation.ui.theme.SpaceLarge
 
 @Composable
